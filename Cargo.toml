@@ -1,0 +1,21 @@
+[package]
+name = "modCPK"
+version = "1.1.0"
+authors = []
+edition = "2021"
+
+[package.metadata.skyline]
+titleid = "0100DCD01525A000" # Persona 3 Portable
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+skyline = "0.6.0"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+lto = true
